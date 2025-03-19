@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Мои поездки</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <nav class="header__body">
+                    <ul class="header__menu">
+                        <li>
+                            <a href="#" class="link active">Поездки</a>
+                        </li>
+                    </ul>
+                    <ul class="header__profile">
+                        <li><a href="#" class="header__profile-link">Заболоцкий К.О.</a></li>
+                        <li>
+                            <a href="#" class="header__profile-logout">
+                                <img src="img/Logout.svg" alt="Log out">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="trips">
+            <div class="trips__body">
+                <a href="#" class="link">Мои поездки</a>
+                <button class="addtrips">
+                    <img src="img/Plus.svg" alt="Plus"><span class="link">Оформить Поездку</span>
+                </button>                  
+            </div>
+            <form action="#" method="get" class="trips__filtr">  
+                <div class="row">
+                    <span>Период с:</span>                 
+                    <div class="date">                        
+                        <input type="date" id="dateInput1" class="date-input" name="dateFrom" required>
+                        <label for="dateInput" class="placeholder">Выберать...</label>
+                        <span class="picker-icon" onclick="openDatePicker('dateInput1')"><img src="img/Calendar.svg" alt=""></span> <!-- Ваша иконка для выбора -->
+                        <span class="clear-icon" onclick="clearDate('dateInput1')"><img src="img/close-1.svg" alt=""></span>
+                    </div>
+                    <span>по:</span>
+                    <div class="date">                        
+                        <input type="date" id="dateInput2" class="date-input" name="dateTo" required>
+                        <label for="dateInput" class="placeholder">Выберать...</label>
+                        <span class="picker-icon" onclick="openDatePicker('dateInput2')"><img src="img/Calendar.svg" alt=""></span> <!-- Ваша иконка для выбора -->
+                        <span class="clear-icon" onclick="clearDate('dateInput2')"><img src="img/close-1.svg" alt=""></span>
+                    </div>
+                    <div class="filtr__search">
+                        <input type="search" placeholder="Поиск..." id="search-input">
+                        <span><img src="img/Search.svg" alt=""></span>
+                    </div>                    
+                    <button type="reset" class="trips__filtr-rest"><img src="img/Close.svg" alt="Close">Сбросить все</button>
+                </div>                        
+                <div class="trips__check">
+                    <input type="checkbox" name="archive" id="archive">
+                    <label for="archive">Показать архивные поездки</label>
+                </div>
+            </form>  
+            <div class="progress">
+                <div class="progress__active"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="container">
+                <div class="cards__body">
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">
+                                <p class="city">Москва, Ярославль, Ижевск, Владимир, Москва, Ярославль, Ижевск, Владимир</p>
+                                <div class="info" id="infoIcon"><img src="img/info.svg" alt="info">
+                                    <div class="tooltip" id="tooltip">Москва, Ярославль, Ижевск, Владимир, Москва, Ярославль, Ижевск, Владимир</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                    <div class="cards__blocks">
+                        <div class="cards__id card">
+                            <p class="card-name ">№ поездки</p>
+                            <h4 class="cards__block-id">000115</h4>
+                        </div>
+                        <div class="cards__date card">
+                            <div class="card-name">Дата поездки</div>
+                            <div class="cards__block-text">22.02.2024 - 27.02.2024</div>
+                        </div>
+                        <div class="cards__plan card">
+                            <div class="card-name">Сумма, план</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__fact card">
+                            <div class="card-name">Сумма, факт</div>
+                            <div class="cards__block-text">29 400,00</div>
+                        </div>
+                        <div class="cards__city card">
+                            <div class="card-name">Город</div>
+                            <div class="cards__block-text">Москва, Ярославль, Ижевск, Владимир</div>
+                        </div>
+                        <div class="cards__status card">
+                            <div class="card-name">Статус</div>
+                            <button class="cards__status-btn">Документы</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+</body>
+
+<script>
+    
+    function openDatePicker(inputId) {
+        const dateInput = document.getElementById(inputId);
+        dateInput.showPicker();
+    }
+
+    function clearDate(inputId) {
+        const dateInput = document.getElementById(inputId);
+        dateInput.value = '';
+        dateInput.dispatchEvent(new Event('input'));
+    }
+    
+    const infoIcon = document.getElementById('infoIcon');
+    const tooltip = document.getElementById('tooltip');
+
+    infoIcon.addEventListener('mouseenter', () => {
+        tooltip.style.display = 'block';
+    });
+
+    infoIcon.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+    });
+
+</script>
+
+</html>
