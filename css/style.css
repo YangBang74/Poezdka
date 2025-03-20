@@ -111,6 +111,7 @@ body {
 
 input[type="date"] {
     font-family: "Inter";
+    background-color: #ffffff;
 }
 
 .trips__filtr {
@@ -121,6 +122,7 @@ input[type="date"] {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.88rem;
     gap: 10px;    
 }
 
@@ -144,8 +146,11 @@ input[type="date"] {
 .placeholder {
     position: absolute;
     background: #ffffff;
+    width: 130px;
+    height: 20px;
     top: 5px;
     left: 10px;
+    font-size: 0.88rem;
     color: #aaa;
     pointer-events: none;
     transition: all 0.2s;
@@ -160,7 +165,7 @@ input[type="date"] {
     background-color: #ffffff;
     width: 16px;
     right: -7px;
-    top: 5px;
+    top: 6px;
     cursor: pointer;    
 }
 
@@ -185,12 +190,15 @@ input[type="date"] {
     padding: 0 10px;
     border: 1px solid #DDE2E4;
     border-radius: 4px;  
+    & img {
+        padding: 5px 0 0;
+    }
 }
 
 #search-input {
     border: none;
-    padding: 5px 10px;
-    font-size: 1rem;
+    padding: 5px 10px 5px 0;
+    font-size: 0.88rem;
     -webkit-appearance: none; 
     -moz-appearance: none;
     appearance: none;
@@ -215,7 +223,6 @@ input[type="date"] {
     border: none;
     display: flex;
     align-items: center;
-    font-size: 0.8rem;
     color: #4094F7;
     gap: 3px;
     border-bottom: 1px solid currentColor;
@@ -259,8 +266,8 @@ input[type="date"] {
     border-radius: 6px;
     padding: 16px 0;
     display: grid;
-    grid-template: 1fr / 100px 176px 114px 86px minmax(126px, 580px) minmax(auto, 96px);
-    gap: 10px;
+    grid-template: 1fr / 100px 176px 76px 76px minmax(126px, 580px) minmax(auto, 96px);
+    gap: 20px;
     justify-content: space-between;    
 }
 
@@ -268,6 +275,10 @@ input[type="date"] {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.cards__block-textr {
+    text-align: right;
 }
 
 .cards__body {
@@ -279,6 +290,7 @@ input[type="date"] {
 
 .card-name {
     color: #84919A;
+    font-size: 0.75rem;
 }
 
 .cards__block-text {
@@ -287,7 +299,7 @@ input[type="date"] {
 }
 
 .cards__block-text p{
-    max-width: 300px;
+    max-width: 505px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
